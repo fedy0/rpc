@@ -60,7 +60,7 @@ void serial_print_example()
 void setup()
 {
   Serial.begin(115200);
-  Serial.println(F("Testing RPC: Remote Control - As The Controller Device"));
+  Serial.println(F("Testing RPC: As The Controller Device"));
 #if defined (ESP32)
   Serial1.begin(115200, SERIAL_8N1, 21, 22);   // NOTE: SIMXX Series modem only support baud rates 0(auto-bauding) & 1200-115200 only
 #else
