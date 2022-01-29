@@ -274,4 +274,6 @@ namespace RPC
     };
 } // namespace rpc
 
+extern RPC::rpc_scratch_buffer<256> scratch_buffer; 
+
 #endif // __RPC__

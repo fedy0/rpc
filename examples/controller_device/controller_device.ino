@@ -1,9 +1,11 @@
-// Remote Control - As The Controller Device
+// RPC as the controller device using Serial interface (ie. Software and Hardware serial)
 
 #include <rpc.h>
 
-RPC::RPCSERIAL interface(RPC::HARDWARE, RPC::MASTER);
+RPC::RPCSERIAL interface(RPC::HARDWARE, RPC::SLAVE);
 
+
+// Call Backs
 
 // This example shows reading a Digital I/O pin remotely.
 void digital_read_example()
@@ -57,7 +59,7 @@ void serial_print_example()
 void setup()
 {
     Serial.begin(115200);
-    Serial.Println(F("Testing RPC: Remote Control - As The Controller Device"));
+    Serial.println(F("Testing RPC: Remote Control - As The Controller Device"));
     Serial1.begin(115200);
     interface.begin(&Serial1);
 }
